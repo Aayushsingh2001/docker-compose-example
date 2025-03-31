@@ -1,0 +1,10 @@
+create one folder named project 
+open it in vs code
+
+create file: docker compose.yml
+create folder: backend
+        > cd backend
+        > npm init -y
+        > npm i express mysql2 dotenv
+        create file server.js, .env, Dockerfile
+

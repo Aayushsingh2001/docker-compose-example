@@ -1,0 +1,5 @@
+RBAC: Role Based Authentication COntrol
+It helps to manage permission for diffrent users and defferent services.
+
+Here to complete this part basically we want to create 3 things
+1. user ()

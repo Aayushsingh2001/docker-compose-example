@@ -1,0 +1,20 @@
+services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 9118151707
+      MYSQL_DATABASE: pw
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: 9118151707
+      DB_NAME: pw
+    depends_on:
+      - db
