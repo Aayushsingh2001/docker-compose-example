@@ -1,0 +1,38 @@
+create one folder named project 
+open it in vs code
+
+create file: docker compose.yml
+create folder: backend
+        > cd backend
+        > npm init -y
+        > npm i express mysql2 dotenv
+        create file server.js, .env, Dockerfile
+
+After adding all codes to all mentioned files
+=> docker-compose up -d --build
+
+Check the running containers
+
+Access DB containers: docker exec -it <container-name> bash
+# mysql -u root -p
+enter password: admin
+
+access databases: show databases; (you can see pw databases is available)
+
+You can verify any containers logs by using docker logs 
+=> docker logs <name-of-your-container>
+
+Add some APIs:
+
+app.get('/hello', (req,res)=>{
+    res.send({message:"Hello from Docker Compose"})
+})
+
+Again if you do docker-compose up then you can check the api in browser
+http://localhost:5000/hello
+
+## Create react application using vite tool
+include Dockerfile in that folder
+in docker-compose include one more service for fronted
+
+Check running the service on particular port no

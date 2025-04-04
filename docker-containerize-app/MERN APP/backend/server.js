@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql2s');
+const mysql = require('mysql2');
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +19,10 @@ db.connect((err)=>{
     }else{
         console.log("DB connected")
     }
+})
+
+app.get('/hello', (req,res)=>{
+    res.send({message:"Hello from Docker Compose"})
 })
 
 app.listen(PORT,()=>{

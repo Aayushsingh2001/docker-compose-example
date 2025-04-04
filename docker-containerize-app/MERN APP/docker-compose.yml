@@ -1,5 +1,5 @@
 services:
-  db:
+  mysql:
     image: mysql
     ports:
       - "3306:3306"
@@ -12,9 +12,9 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DB_HOST: db
+      DB_HOST: mysql
       DB_USER: root
       DB_PASSWORD: 9118151707
       DB_NAME: pw
     depends_on:
-      - db
+      - mysql
